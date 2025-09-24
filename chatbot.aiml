@@ -1,0 +1,54 @@
+<aiml version="1.0.1" encoding="UTF-8">
+
+  
+  <!-- Greeting -->
+  <category>
+    <pattern>HELLO</pattern>
+    <template>
+      Hello! I can analyze your sales data. Ask me questions like:
+      "Total revenue", "Best selling product", or "Sales trend".
+    </template>
+  </category>
+
+  <!-- Total Revenue -->
+  <category>
+    <pattern>TOTAL REVENUE</pattern>
+    <template>
+      <think><set name="query">total_revenue</set></think>
+      Processing your query...
+    </template>
+  </category>
+
+  <!-- Best Selling Product -->
+  <category>
+    <pattern>BEST SELLING PRODUCT</pattern>
+    <template>
+      <think><set name="query">best_selling</set></think>
+      Processing your query...
+    </template>
+  </category>
+
+  <!-- Sales Trend -->
+  <category>
+    <pattern>SALES TREND</pattern>
+    <template>
+      <think><set name="query">sales_trend</set></think>
+      Generating sales trend chart...
+    </template>
+  </category>
+  <category>
+    <pattern>REVENUE BY PRODUCT</pattern>
+    <template>
+        ${get_revenue_by_product()}
+    </template>
+</category>
+
+<category>
+    <pattern>revenue by product</pattern>
+    <template>
+        ${get_revenue_by_product()}
+    </template>
+</category>
+
+
+</aiml>
